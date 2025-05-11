@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Clonar repositorio') {
             steps {
-                git url: 'https://github.com/migvivcam/PPS-10197785/blob/main/RA5/RA5_1/'
+                git url: 'https://github.com/migvivcam/calculadora'
             }
         }
 
