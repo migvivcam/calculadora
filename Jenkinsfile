@@ -1,11 +1,11 @@
 // Jenkinsfile
 
 pipeline {
-    agent any
-
-    triggers {
-        pollSCM('* * * * *') // Verifica el repositorio cada minuto (puedes cambiarlo)
-    }
+    agent {
+	docker {
+		image 'python:3.10'
+	}
+}
 
     stages {
         stage('Instalar dependencias') {
