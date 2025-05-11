@@ -7,12 +7,6 @@ pipeline {
     }
 
     stages {
-        stage('Clonar código') {
-            steps {
-                git 'https://github.com/migvivcam/calculadora.git'
-            }
-        }
-
         stage('Construir imagen Docker') {
             steps {
                 sh 'docker build -t $IMAGE_NAME .'
