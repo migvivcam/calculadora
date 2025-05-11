@@ -8,12 +8,6 @@ pipeline {
     }
 
     stages {
-        stage('Clonar repositorio') {
-            steps {
-                git url: 'https://github.com/migvivcam/calculadora'
-            }
-        }
-
         stage('Instalar dependencias') {
             steps {
                 sh 'python -m venv venv'
